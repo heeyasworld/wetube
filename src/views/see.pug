@@ -1,0 +1,9 @@
+extends base.pug
+
+block content
+    h2=video.title
+    h3 #{video.views} #{video.views === 1 ? "view" : "views"}
+    h3 Rating : #{video.rating}/5
+    a(href=`${video.id}/edit`) Edit Video &rarr;
+    //video router 안에 see가 있기 때문에 /videos 생략하고 대신에 ${video.id}앞에도 /생략하고써도됨
+    //하지만 헷갈리면 그냥 `/videos/${video.id}/edit` 이렇게 써도 된다
